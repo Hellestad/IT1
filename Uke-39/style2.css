@@ -229,7 +229,7 @@ body{
 
 #side-1{
   height:100vh;
-  width: 176vh;
+  width: 100vw;
   background: linear-gradient(#313132, #161618);
   z-index: -1;
   scroll-snap-align: start;
@@ -333,7 +333,7 @@ body{
 
 #side-2{
   height:100vh;
-  width: 175.6vh;
+  width: 100vw;
   background: linear-gradient(#313132, #161618);
   z-index: -3;
   scroll-snap-align: start;
@@ -437,7 +437,7 @@ body{
 
 #side-3{
   height:100vh;
-  width: 175.6vh;
+  width: 100vw;
   background: linear-gradient(#313132, #161618);
   z-index: -3;
   scroll-snap-align: start;
@@ -551,7 +551,7 @@ body{
 
 #side-4{
   height:100vh;
-  width: 175.6vh;
+  width: 100vw;
   background: linear-gradient(#313132,#161618);
   z-index: -3;
   scroll-snap-align: start;
