@@ -1,0 +1,169 @@
+body{
+  background-color: rgb(36, 36, 36);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+/*Del 1*/
+
+.del-1{
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(18, 1fr);
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform:translate(-50%, -25%);
+ 
+}
+
+.del-1 .periode-element-en{
+  padding: 20px;
+  height: 19px;
+  transition: 0.3s ease;
+  background-color: rgba(126, 178, 250, 0.9);
+ 
+ 
+}
+
+.del-1 .periode-element-to{
+  padding: 20px;
+  height: 19px;
+  transition: 0.3s ease;
+  background-color: rgba(243, 111, 111,0.9);
+
+}
+
+.del-1 .periode-element-tre{
+  padding: 20px;
+  height: 19px;
+  transition: 0.3s ease;
+  background-color: rgba(199, 241, 135,0.9);
+}
+
+.del-1 .periode-element-en:hover,
+.del-1 .periode-element-to:hover,
+.del-1 .periode-element-tre:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+.del-1 .periode-element-en .tekst,
+.del-1 .periode-element-to .tekst,
+.del-1 .periode-element-tre .tekst
+{
+  text-align: center;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+
+.del-1 .periode-element-en .nummer,
+.del-1 .periode-element-to .nummer,
+.del-1 .periode-element-tre .nummer{
+  text-align: center;
+  margin-top: -15px;
+  margin-left: -40px;
+  
+}
+
+.del-1 .span-1{
+  grid-column: span 16;
+  opacity: 0;
+}
+
+.del-1 .span-2{
+  grid-column: span 10;
+  opacity: 0;
+}
+
+.del-1 .span-3{
+  grid-column: span 10;
+  opacity: 0;
+}
+
+.del-1 .periode-element-liste .nummer{
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.del-1 .periode-element-liste .tekst{
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+/*Del 1 slutt*/
+/*Del 2*/
+.del-2{
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(15, 1fr);
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform:translate(-50%, -85%);
+ 
+}
+
+.del-2 .periode-element-en{
+  padding: 20px;
+  height: 19px;
+  transition: 0.3s ease;
+  background-color: rgba(126, 178, 250, 0.9);
+}
+
+.del-2 .periode-element-to{
+  padding: 20px;
+
+  height: 19px;
+  transition: 0.3s ease;
+  background-color: white;
+}
+
+.del-2 .periode-element-tre{
+  padding: 20px;
+
+  height: 19px;
+  transition: 0.3s ease;
+  background-color: white;
+}
+
+.del-2 .periode-element-en:hover,
+.del-2 .periode-element-to:hover,
+.del-2 .periode-element-tre:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+.del-2 .periode-element-en .tekst,
+.del-2 .periode-element-to .tekst,
+.del-2 .periode-element-tre .tekst
+{
+  text-align: center;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+
+.del-2 .periode-element-en .nummer,
+.del-2 .periode-element-to .nummer,
+.del-2 .periode-element-tre .nummer{
+  text-align: center;
+  margin-top: -15px;
+  margin-left: -40px;
+  
+}
+
+/*Del 2 slutt*/
+
+
