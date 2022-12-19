@@ -1,0 +1,221 @@
+
+.overskrift{
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  transform: translate(-25%,-5%);
+  font-size: 4em;
+  z-index: -1;
+}
+
+
+
+/*Tabell*/
+.tabell{
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns:1.5fr repeat(4,0.8fr);
+  width: 500px;
+  height: 700px;
+  max-width:80%;
+  max-height:80% ;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-90%,-50%);
+  z-index: -1;
+}
+
+.tabell>div{
+  border: 0.1vh solid black;
+  padding: 0.3vh;
+  
+}
+/*Slutt Tabell*/
+
+
+/*Terning*/
+.terninger{
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  transform: translate(-25%,55%);
+  z-index: -1;
+}
+.terning{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 10px;
+ 
+}
+
+.terning-container{
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  float: right;
+  margin: 3px;
+  
+}
+
+/*slutt Terning*/
+
+/*Kaste knapp*/
+
+.kast{
+  border: 1px solid black;
+  background-color: white;
+  width:110px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 0.80em;
+  position: absolute;
+  top: 55%;
+  left: 21%;
+  transform: translate(-21%,-55%);
+  transition: 200ms ease-in-out;
+  z-index: -1;
+}
+
+/*spiller knapp*/
+
+.spillere{
+  border: 1px solid black;
+  background-color: white;
+  width:110px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 0.80em;
+  position: absolute;
+  top: 55%;
+  left: 29.5%;
+  transform: translate(-29.5%,-55%);
+  transition: 200ms ease-in-out;
+  z-index: -1;
+}
+
+/* regel knapp*/
+.regler{
+  border: 1px solid black;
+  background-color: white;
+  width:110px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 0.80em;
+  position: absolute;
+  top: 55%;
+  left: 38%;
+  transform: translate(-38%,-55%);
+  transition: 200ms ease-in-out;
+  z-index: -1;
+}
+
+/*hva som skjer når man holder over knappene*/
+.kast:hover,.spillere:hover,.regler:hover{
+  width:115px ;
+  height: 40px;
+  z-index: 4;
+}
+
+/*div til antall kast*/
+.antallkast-container{
+  width: 80px;
+  height: 60px;
+  background-color: white;
+  position: absolute;
+  top: 54%;
+  left: 46%;
+  transform: translate(-46%,54%);
+  z-index: -1;
+}
+
+.tekst-antallkast{
+  font-size: 15px;
+}
+
+#antallkast{
+  margin-top: -10px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.rad1,.rad2,.rad3,.rad4,.rad5,.rad6,.rad7,.rad8,.rad9,.rad10,
+.rad11,.rad12,.rad13,.rad14,.rad15,.rad16,.rad17,.rad18{
+  text-align: center;
+  
+}
+
+/*popup boks*/
+
+
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: 200ms ease-in-out;
+  width:600px;
+  height: 610px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.popup.active{
+  transform: translate(-50%,-50%) scale(1);
+}
+
+
+.popup-tekst{
+  font-size: 1.2em;
+}
+
+
+.popup-overskrift{
+  margin-left: 210px;
+  margin-top: 4%;
+  font-size: 2rem;
+  
+}
+
+#lukkRegler{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.4rem;
+  position: fixed;
+  top: 4%;
+  left: 90%;
+
+}
+
+
+li{
+  margin-bottom: 20px;
+}
+
+
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}

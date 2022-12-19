@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="yatzy.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Yatzy</title>
+</head>
+<body>
+  <div class="overskrift">
+    <h1>Yatzy</h1>
+  </div>
+  
+  <section class="terninger">
+    <!--terninger -->
+    <div class="terning-container">
+      <img class="terning" id="bilde1" src="terning1.png" data-verdi="1" onclick="byttFarge(1)">
+    </div>
+
+    <div class="terning-container">
+      <img class="terning"  src="terning2.png" id="bilde2" data-verdi="2" onclick="byttFarge(2)">
+    </div>
+      <div class="terning-container">
+      <img class="terning"  src="terning3.png" id="bilde3" data-verdi="3" onclick="byttFarge(3)">
+    </div>
+      <div class="terning-container">
+      <img class="terning"  src="terning4.png" id="bilde4" data-verdi="4" onclick="byttFarge(4)">
+    </div>
+      <div class="terning-container">
+      <img class="terning"  src="terning5.png" id="bilde5" data-verdi="5" onclick="byttFarge(5)">
+    </div>
+   </section>
+
+   <div class="antallkast-container">
+    <div class="tekst-antallkast">
+      <h4>Antall Kast</h4>
+    </div>
+    <div id="antallkast" >0</div>
+  </div>
+
+   <!-- Knapp for å endre terning -->
+   <button class="kast" id="kastTerning" >Kast terningene</button>
+   <!-- Knapp for Velge spillere -->
+   <button class="spillere" id="Spillere">Velg spillere</button>
+   <!-- Knapp for Reglene -->
+   <button class="regler" data-modal-target="#modal" >Regler</button>
+
+   <section class="tabell">
+    <!--Start scoreBoard-->
+      <div><b>Deltakere</b></div>
+      <div class="deltakere" id="deltaker1"></div>
+      <div class="deltakere" id="deltaker2"></div>
+      <div class="deltakere" id="deltaker3"></div>
+      <div class="deltakere" id="deltaker4"></div>
+      <div>Enere</div>
+      <div class="rad1" onclick="EnTilSeks(1,1)"></div>
+      <div class="rad1" onclick="EnTilSeks(1,2)"></div>
+      <div class="rad1" onclick="EnTilSeks(1,3)"></div>
+      <div class="rad1" onclick="EnTilSeks(1,4)"></div>
+      <div>Toere</div>
+      <div class="rad2" onclick="EnTilSeks(2,1)"></div>
+      <div class="rad2" onclick="EnTilSeks(2,2)"></div>
+      <div class="rad2" onclick="EnTilSeks(2,3)"></div>
+      <div class="rad2" onclick="EnTilSeks(2,4)"></div>
+      <div>Treere</div>
+      <div class="rad3" onclick="EnTilSeks(3,1)"></div>
+      <div class="rad3" onclick="EnTilSeks(3,2)"></div>
+      <div class="rad3" onclick="EnTilSeks(3,3)"></div>
+      <div class="rad3" onclick="EnTilSeks(3,4)"></div>
+      <div>Firere</div>
+      <div class="rad4" onclick="EnTilSeks(4,1)"></div>
+      <div class="rad4" onclick="EnTilSeks(4,2)"></div>
+      <div class="rad4" onclick="EnTilSeks(4,3)"></div>
+      <div class="rad4" onclick="EnTilSeks(4,4)"></div>
+      <div>Femere</div>
+      <div class="rad5" onclick="EnTilSeks(5,1)"></div>
+      <div class="rad5" onclick="EnTilSeks(5,2)"></div>
+      <div class="rad5" onclick="EnTilSeks(5,3)"></div>
+      <div class="rad5" onclick="EnTilSeks(5,4)"></div>
+      <div>Seksere</div>
+      <div class="rad6" onclick="EnTilSeks(6,1)"></div>
+      <div class="rad6" onclick="EnTilSeks(6,2)"></div>
+      <div class="rad6" onclick="EnTilSeks(6,3)"></div>
+      <div class="rad6" onclick="EnTilSeks(6,4)"></div>
+      <div><b>Sum</b></div>
+      <div class="rad7" onclick="SumEn(7,1)"></div>
+      <div class="rad7" onclick="SumEn(7,2)"></div>
+      <div class="rad7" onclick="SumEn(7,3)"></div>
+      <div class="rad7" onclick="SumEn(7,4)"></div>
+      <div><b>Bonus</b></div>
+      <div class="rad8" ></div>
+      <div class="rad8" ></div>
+      <div class="rad8" ></div>
+      <div class="rad8" ></div>
+      <div>Liten straight</div>
+      <div class="rad9" onclick="litenStraight(9,1)"></div>
+      <div class="rad9" onclick="litenStraight(9,2)"></div>
+      <div class="rad9" onclick="litenStraight(9,3)"></div>
+      <div class="rad9" onclick="litenStraight(9,4)"></div>
+      <div>Stor straight</div>
+      <div class="rad10" onclick="Straight(10,1)"></div>
+      <div class="rad10" onclick="Straight(10,2)"></div>
+      <div class="rad10" onclick="Straight(10,3)"></div>
+      <div class="rad10" onclick="Straight(10,4)"></div>
+      <div>Sjanse</div>
+      <div class="rad11" onclick="Sjangse(11,1)"></div>
+      <div class="rad11" onclick="Sjangse(11,2)"></div>
+      <div class="rad11" onclick="Sjangse(11,3)"></div>
+      <div class="rad11" onclick="Sjangse(11,4)"></div>
+      <div>Yatzy</div>
+      <div class="rad12" onclick="yatzy(12,1)"></div>
+      <div class="rad12" onclick="yatzy(12,2)"></div>
+      <div class="rad12" onclick="yatzy(12,3)"></div>
+      <div class="rad12" onclick="yatzy(12,4)"></div>
+      <div><b>Total</b></div>
+      <div class="rad13" onclick="SumTo(13,1)"></div>
+      <div class="rad13" onclick="SumTo(13,2)"></div>
+      <div class="rad13" onclick="SumTo(13,3)"></div>
+      <div class="rad13" onclick="SumTo(13,4)"></div>
+    </section> 
+    
+    
+    
+    
+    <!--Slutt scoreBoard-->
+
+ 
+  
+    
+    
+  
+  <div id="modal" class="popup " >
+    <div class="popup-overskrift">
+       Yatzy-Regler
+      <button data-close-button id="lukkRegler">&times;</button>
+    </div>
+    
+    <div class="popup-tekst">
+      <ol>
+        <li>Enere – Gir samme antall poeng som antall øyne på enere</li>
+        <li>Toere – Gir samme antall poeng som antall øyne på toere.</li>
+        <li>Treere – Gir samme antall poeng som antall øyne på treere. </li>
+        <li> Firere – Gir samme antall poeng som antall øyne på firere.</li>
+          <li>Femmere – Gir samme antall poeng som antall øyne på femmere.</li>
+          <li>Seksere – Gir samme antall poeng som antall øyne på seksere.</li>
+          <li>SUM: Hvis du har 63 eller flere poeng fra 1,2,3,4,5,6 ("over streken"), får du 50 poeng i bonus.
+            (63 poeng tilsvarer 3 enere, 3 toere, 3 treere, 3 firere, 3 femmere og 3 seksere.)</li>
+          <li>Liten straight – Kombinasjonen 1-2-3-4-5, gir 15 poeng.</li>
+         <li>Stor straight – Kombinasjonen 2-3-4-5-6, gir 20 poeng.</li>
+         <li>Sjanse – Vilkårlig kombinasjon, gir samme antall poeng som øyne.</li>
+         <li>Yatzy – Fem like terninger, gir 50 poeng.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div  id="overlay"></div>
+
+  
+ 
+  <script src="yatzy.js"></script>
+</body>
+</html>
