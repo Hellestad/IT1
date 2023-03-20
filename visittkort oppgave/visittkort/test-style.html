@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visittkort Designer</title>
+    <link rel="stylesheet" href="test-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,300;1,500&family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Visittkort Designer</h1>
+
+    <form id="kortSkjema">
+      <section class="informasjon">
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" required><br><br>
+
+        <label for="navn">Firma:</label>
+        <input type="text" id="firma" required><br><br>
+
+        <label for="stilling">Stilling:</label>
+        <input type="text" id="stilling" required><br><br>
+
+        <label for="postnummer">Post.nr:</label>
+        <input type="text" id="postnummer" required><br><br>
+
+        <label for="telefon">Tlf:</label>
+        <input type="text" id="telefon" required><br><br>
+
+        <label for="epost">Epost:</label>
+        <input type="email" id="epost" required><br><br>
+
+        <label for="nettsted">Nettside:</label>
+        <input type="url" id="nettsted" required><br><br>
+      </section>
+
+        <h3>Velg design:</h3>
+          <section class="design-boks">
+           <!-- Design 1 -->
+            <div id="design1" class="kort design1" onclick="velgDesign('design1')">
+              <h2 class="kort-navn" data-font-størrelse="30px" >Navn</h2>
+              <h2 class="kort-firma" data-font-størrelse="25px" style="display:none;" >Navn</h2>
+              <p class="kort-stilling" data-font-størrelse="20px">Stilling</p>
+              <p class="kort-postnummer" data-font-størrelse="15px"><img class="img-design1-postnr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEpElEQVR4nM2aaYgcVRDH23h98ETFAxXjgYqiRhY1ChKVqLtT1buJsCqC+WC+iILHF8UPMqIiu13Ve8QDgn4RvIgaTYwg6Id4RCOYD2JIQPHIoSjqJrtdb2ZjjpbqmdmD7Ha/menXk4IHTU93vf69qvd/9brH83K2KvkXGsLHhXGtMG4Wxl31psdrTQCP6TXekWoR+bcJwTeGMbZpwvB1FJZu9Y4Ui0b8swzhx7YAc7QNES0/s7MQgX+1EPzaBkQ9OrjLMHR1BEKC0iIhiNqFmG4wISFcUyjEBOMZQvhzfhBTkfmt0DRrc05kicD6QiAigltcQZh6UwV0DtKMxLYcFcJNTiGqQ3CR5YNMCsOoodINMd1+gjY9FsJV+puNj+pw30JnILoqW0DsTlOfmtrhbgsVe9QZSFJiZEXCQkLrMKmREYL33IEQfpuhOKPWvhhfTPeFmx2CwM7UdAjheltfJvQXZ0RkpzMQQ/BnWufxS/0n2vrSa1MHhfAPZyDC+GNeIP+Mdp+cAbLNIQh8VWBqbXQGYghezVCtVblNdsJXOraOJPIblBZZyS/DvozUesgdCOF1VgtiCoztghiFPVc5A4nX9B9tGPdmwjDsS1In9BerAGirBHijnsuMBCer+l9x7B3luTRdcbMfpM1G+Lrn2ioE97oGEfbROcjfg70nCYNxCDIWj3Yf7xVhhuE1hyDsFWWqPE5SivDQJPdcWhhIAkO4Kf9JDh95RVsU4H25RyQsdRcOEpf7jxOG33OMxva4XF7gdcIM48N5gVQY7/E6ZfHqrmNzelH3Q8ei0TBheKBtkMDv8zptsdZfBNvbAPnOeV1la4ZxWUsqRXioEuISr0iLy+UF0ZB/pZC/MqlsCT4zBFv3DPedmsAQftI0COPbjZfiurU1jJ/WXuL5Kyeo94rcIjX+wrLTJYQVwviuIdiTtiscH+y9zK5Eb9wHkRnoPi8ZBMbVc0sy/iuEa4Tw/r3hHac1DVDh0k2G4U2b15vCuL+xCTKMA02APFW7B7qE4aBFGk7qM+mzZQJUg+6LheHD5nMdNmoa6AZKGH7JvIdgqy6oeo9+S2xhbq2rhv4lc0JoeTBf+lg5D2GF+okCWKqTeP4IwkHdOSbRIHyw1f4M4bgQ9syC0NQQgkrLThv5HJTOznrbIoQjyTUhnGuzbTbpkflPuPfa6WgQrmsLYnq+vK/+xgaWniIMO+ZIwZ/0E0PSJ8P6XPok+HIKRD9E5uF0Zs1UGYSbheDADMj9jZRSFcqrPyE4MFXeWE1Q+zZW4b7z63Pg2enUg2cSQRnuW9huSplZWQA7plOL4YkcQXT0P9fSJS4vOUY3S5pGeqznhPGLXPuimownlnRA8EHOMOXDlJHh6XwhcJ0O0KxO6qP3fJLL+XU0omuTar4ulmmy3OQgVQ3Dc4dBzLQJxsuF4K1myo2imuggE75RodIF8wLMAaSF3COGYUteI9l6gy36cbTtf0Wogwr5d+urfsPwvctoSeI76eNllXIZuvOcth4+zTQ3tdo1VLpLCJ7UuSAE76ha6Sar/o+hsVklT+14LPmNcJteW7sHRtWHCWC5+kzN+xT7H0DKTkeYnEgHAAAAAElFTkSuQmCC"> 1234</p>
+              <p class="kort-telefon" data-font-størrelse="15px"><img class="img-design1-tlf" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNUlEQVR4nO2awU4CQQyG5z2Em/osmNb4UmIwUx6EEE7iW0kiMFU8QQYWDyRom53ZYPy/ZC6bTf90+u1pG8J/RkeDXhKeqtBKhbdlDq2S8GzzTDedNaGRF+UaODmRFzqmq+qNHCaRA+mlZGCupcLzXDsJTUrVPR941KnCrX3IQ7+ZzHuozVGBX955SkJfp9rsn0Uetq1fBEtQirT+6aNuW7+7iUQenp8IPbatX4TaQYpGnGAiRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaRhRqOYFaF6dW5OU+bDTo/emFgSQ8a8LmJZtpdlxeD7+xeRpqs5G7WxV6q7lU8zm+vw5dkPdQ8uLLt2ZlGljmSXTWxKWyA3mCU+FMCsEjAAAAAElFTkSuQmCC"> 12345678</p>
+              <p class="kort-epost" data-font-størrelse="15px"><img class="img-design1-mail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABaklEQVR4nO2UO08DMQzHw0MIhGBgQoLvUiEEqmqXBTqxARsbC+OtBTsDEisTTLCxMbHSkQE2PgCCAYkEVF6HknvoSsv10itLOUt/XZRc/LOdxEIUVtjAmtqvzGqGa83o/43gRkuYa4E+My6a75NcnlGMV/2GGp/Gd5IVZMvQ1ARrZuzT0qRmuOgj+PJhb2XK+NaEVcX4GoNtVAQfimHDwr3amGI8y58pnPteaTzIFNYV47uZbwEHcPx6Ydyx8NPaiCY86hlMeOx7pdHQ/7Zi+IzW2sAJ1S3cF0OakZ0zJTj0PW/YHiPB7s/1NHDXzSmKg1YEstM/Ig0cluvkt3K1B5r9mERXcHRBZG0iviCEbx2q43QxRRZw9CQeD8rTySeRCKypJa66PEXhADalbMRNQFYWFOGdkRnHzYewkcWXcAGHZ36r6+X5vO1WOIOt4F5RddMEYKQYt8yciw/RGzi/RAHW/6bUhRU2UPYNOW0Lo2ix2ngAAAAASUVORK5CYII="> eksempel@epost.com</p>
+              <p class="kort-nettsted" data-font-størrelse="15px"><img class="img-design1-nettsted" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACOUlEQVR4nN1UzWoUQRBeFaOCePMRRBA8+QCCImy2akMijiefIETFk8dFVoTd6j2sKOLJSwzGQ8jNkxfFF/AHI+pFPYrgTnfcJISW6qlee2Z7ZycePNgwTM90dX1VX31Vtdp/vWwrmdmk5mVNsGIUbGiFmh+3J1jhM7b5K+eGGhc14Wej0JY9WuEn04WFPUTd2m8UdHMOFFz/2Zk7aVtnD9teciQAeDPaE3b47vTIxblWuGMIbwjg87HICb64M8JFrfCXB5lKS3YZt1PVvPAHtOgcv+keNPx5Ss1zmnAo5/MTqElmPOea4GY+K3SOy4PDRbn70T48c3DMgBXhHfGe/2nCV2HkZQBC1+uMKrg0ZpBJcVTYHTYqqOVFGUCWBSxJLZYjAPghcwSrIxBVHrkhuB1+D2juVHYHNmIZpHz4vV8/ZhTcqkKNyQK6b21tn6NJJMy+IsYw4EN7Lzkq3+1JzRUCCMgD3wOcVRTAU8RpBqDtKgBS2Ef2aXKA/6e9xpVYBo8z48bVwv+2OPkRo6jQfE+iEs3JlOBtseXNhFrEZxOs2379ULzR3NxxIEs5+hR+DaJ8WQYgMn3GBR+nqQsLMgqG4ajQhLM8eyYWmXBbpL0WpScHQtjxIIbwWkhXDEAT3uWhKPTsDjtwolah5R2INM07Bkp7s6cjAHf4Lb0z8JKdmoVcnufBVSbTcLlMshptDvr145VAWHJuJhEuG4L33EBawVbMlqlhiljOqcLzlQD2ujhrPwn+2foNO1GVYS+LmsMAAAAASUVORK5CYII="> www.eksempel.no</p>
+            </div>
+
+            <!-- Design 2 -->
+            <div id="design2" class="kort design2"  onclick="velgDesign('design2')">
+              <h2 class="kort-navn" data-font-størrelse="40px" >Navn</h2>
+              <h2 class="kort-firma" data-font-størrelse="25px" >Navn</h2>
+              <p class="kort-stilling" data-font-størrelse="20px" >Stilling</p>
+              <p class="kort-postnummer" data-font-størrelse="20px">Post.nr: 1234</p>
+              <p class="kort-telefon" data-font-størrelse="20px">Tlf: 123 45 678</p>
+              <p class="kort-epost" data-font-størrelse="20px">Epost: </p>
+              <p class="kort-nettsted" data-font-størrelse="20px">Nettside: www.eksempel.no</p>
+            </div>
+
+            <!-- Design 3 -->
+            <div id="design3" class="kort design3"  onclick="velgDesign('design3')">
+              <h2 class="kort-navn" data-font-størrelse="35px">Navn</h2>
+              <h2 class="kort-firma" data-font-størrelse="25px" style="display: none;"></h2>
+              <p class="kort-stilling" data-font-størrelse="20px">Stilling</p>
+              <p class="kort-postnummer" style="color:white ;" data-font-størrelse="20px">Post.nr: 1234</p>
+              <p class="kort-telefon" style="color:white ;" data-font-størrelse="20px">Tlf: 12345678</p>
+              <p class="kort-epost" style="color:white ;" data-font-størrelse="20px">Epost: eksempel@epost.com</p>
+              <p class="kort-nettsted" style="color:white ;" data-font-størrelse="20px">Nettside: www.eksempel.no</p>
+            </div>
+
+          </section>
+     
+    </form>
+
+    
+    
+    <section class="kort-boks">
+      <div id="valgtKort" class="kort" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); width: 700px; height: 350px;"></div>
+    </section>
+
+
+    <script>
+
+
+function velgDesign(design) {
+  valgtDesign = design;
+
+  const designalternativer = ['design1', 'design2', 'design3'];
+  designalternativer.forEach(d => {
+    document.getElementById(d).classList.remove('valgt');
+  });
+
+  document.getElementById(valgtDesign).classList.add('valgt');
+
+  const valgtKort = document.getElementById("valgtKort");
+  valgtKort.className = `kort ${valgtDesign}`;
+
+  valgtKort.innerHTML = document.getElementById(valgtDesign).innerHTML;
+
+  const tekstElementer = valgtKort.querySelectorAll(".kort-navn, .kort-firma, .kort-stilling, .kort-postnummer, .kort-telefon, .kort-epost, .kort-nettsted");
+  tekstElementer.forEach(element => {
+    const fontStørrelse = element.dataset.fontStørrelse;
+    element.style.fontSize = fontStørrelse;
+  });
+
+  valgtKort.querySelector('.kort-navn').textContent = document.getElementById("navn").value;
+  valgtKort.querySelector('.kort-firma').textContent = document.getElementById("firma").value;
+  valgtKort.querySelector('.kort-stilling').textContent = document.getElementById("stilling").value;
+  valgtKort.querySelector('.kort-postnummer').textContent = `Post.nr: ${document.getElementById("postnummer").value}`;
+  valgtKort.querySelector('.kort-telefon').textContent = `Tlf: ${document.getElementById("telefon").value}`;
+  valgtKort.querySelector('.kort-epost').textContent = `Epost: ${document.getElementById("epost").value}`;
+  valgtKort.querySelector('.kort-nettsted').textContent = `Nettside: ${document.getElementById("nettsted").value}`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

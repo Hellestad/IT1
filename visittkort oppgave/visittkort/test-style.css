@@ -1,0 +1,324 @@
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+h3 {
+  color: #333;
+  margin: 20px;
+}
+
+label {
+  width: 70px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left:10px ;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+  width: 20%;
+  padding: 5px;
+  margin: 5px 0 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Kort-stiler */
+.kort {
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.kort-boks{
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translate(-70%,-20%);
+}
+
+.design-boks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/**Design 1**/
+
+.design1 {
+  background: white;
+  background-image: url('./layered-waves-haikei2.svg');
+  color: #000000;
+  font-size: 5px;
+  position: relative;
+}
+
+.design1 .kort-navn {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  font-size: 12px;
+  color: #050b22;
+  
+  
+}
+
+.design1 .kort-stilling {
+  position: absolute;
+  top: 32%;
+  left: 15%;
+  font-size: 10px;
+  color: #038fcc;
+}
+
+.design1 .kort-postnummer {
+  position: absolute;
+  top: 47%;
+  left: 15%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design1 .kort-telefon {
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design1 .kort-epost {
+  position: absolute;
+  top: 63%;
+  left: 15%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design1 .kort-nettsted {
+  position: absolute;
+  top: 71%;
+  left: 15%;
+  font-size: 8px;
+  color: #333;
+}
+
+.img-design1-postnr{
+  width: 15px;
+  height: 15px;
+}
+
+.img-design1-tlf{
+  width: 15px;
+  width: 15px;
+}
+
+.img-design1-mail{
+  width: 15px;
+  height: 15px;
+}
+
+.img-design1-nettsted{
+  width: 15px;
+  height: 15px;
+}
+
+/**Design 2**/
+
+.design2 {
+  background: white;
+  color: #000000;
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.design2 .kort-navn {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  font-size: 16px;
+  color: #333;
+  transform: translate(-50%, -40%);
+}
+
+.design2 .kort-firma{
+  position: absolute;
+  top: 8%;
+  left: 70%;
+  font-size: 12px;
+  color: #333;
+}
+
+.design2 .kort-stilling {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-size: 8px;
+  color: #333;
+  transform: translate(-50%, -50%);
+}
+
+.design2 .kort-postnummer {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design2 .kort-telefon {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design2 .kort-epost {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design2 .kort-nettsted {
+  position: absolute;
+  top: 80%;
+  left: 65%;
+  font-size: 8px;
+  color: #333;
+}
+
+
+/**Design 3**/
+
+.design3 {
+  background-color: white;
+  background-image: url('./layered-waves-haikei.svg');
+  color: #000000;
+  font-size: 5px;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+}
+
+.design3 .kort-navn {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-size: 8px;
+  color: #333;
+}
+
+
+
+.design3 .kort-stilling {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 8px;
+  color: #333;
+  border-bottom: 1px solid black;
+}
+
+.design3 .kort-postnummer {
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design3 .kort-telefon {
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design3 .kort-epost {
+  position: absolute;
+  top: 65%;
+  left: 55%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design3 .kort-nettsted {
+  position: absolute;
+  top: 80%;
+  left: 55%;
+  font-size: 8px;
+  color: #333;
+}
+
+
+
+
+.kort:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.valgt {
+  border: 3px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Valgt kort */
+#valgtKort {
+  margin: 0 auto;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333;
+}
+
+#valgtKort h2 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+#valgtKort p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.bakgrunn{
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+  width: 100vw;
+  height: 100vh;
+}
+
+.bakgrunn::after{
+  content: '';
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width:100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.overskrift{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 60px;
+  z-index: 2;
+}
+
+
+.kort {
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.kort:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.designboks{
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-70%);
+  z-index: 3;
+
+}
+li{
+  list-style: none;
+}
+/**Design 1**/
+
+.design1 {
+  
+  background: hsla(0, 51%, 92%, 1);
+  background: radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 29%);
+  background: -moz-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 29%);
+  background: -webkit-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 29%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f5e0e0", endColorstr="#ee3232", GradientType=1 );
+  font-family: 'Cormorant Garamond', serif;
+  color: #000000;
+  font-size: 5px;
+  position: relative;
+  
+}
+
+.design1 .kort-navn {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  font-size: 12px;
+  color: #050b22;
+  
+}
+
+.design1 .kort-skole {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  font-size: 12px;
+  color: #050b22;
+  transform: translate(-50%,-2%);
+  
+}
+
+
+.design1 .kort-postnummer {
+  position: absolute;
+  top: 53%;
+  left: 65%;
+  font-size: 8px;
+  color: #050b22;
+}
+
+.design1 .kort-telefon {
+  position: absolute;
+  top: 60%;
+  left: 65%;
+  font-size: 8px;
+  color: #050b22;
+}
+
+.design1 .kort-tekst{
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  font-size: 8px;
+  color: #050b22;
+}
+
+.design1 .img-russ img{
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  width: 120px;
+}
+
+.design1 .img-russBilde img{
+  height: 80px;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  transform: translate(-10%, -25%);
+  transform: rotate(-20deg);
+  box-shadow: 7px 7px black;
+}
+
+/**Design 2**/
+
+.design2 {
+  background: white;
+  color: #000000;
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.design2 .kort-navn {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  font-size: 16px;
+  color: #333;
+  transform: translate(-50%, -40%);
+}
+
+.design2 .kort-firma{
+  position: absolute;
+  top: 8%;
+  left: 70%;
+  font-size: 12px;
+  color: #333;
+}
+
+.design2 .kort-stilling {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-size: 8px;
+  color: #333;
+  transform: translate(-50%, -50%);
+}
+
+.design2 .kort-postnummer {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design2 .kort-telefon {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design2 .kort-epost {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  font-size: 8px;
+  color: #333;
+}
+
+.design2 .kort-nettsted {
+  position: absolute;
+  top: 80%;
+  left: 65%;
+  font-size: 8px;
+  color: #333;
+}

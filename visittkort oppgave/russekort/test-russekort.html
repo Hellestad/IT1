@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visittkort Designer</title>
+    <link rel="stylesheet" href="test-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,300;1,500&family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Visittkort Designer</h1>
+
+    <form id="kortSkjema">
+      <section class="informasjon">
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" required><br><br>
+
+        <label for="navn">Skole:</label>
+        <input type="text" id="skole" required><br><br>
+
+        <label for="postnummer">Post.nr:</label>
+        <input type="text" id="postnummer" required><br><br>
+
+        <label for="telefon">Tlf:</label>
+        <input type="text" id="telefon" required><br><br>
+
+        <label for="tekst">Tekst:</label>
+        <input type="text" id="tekst" required><br><br>
+      </section>
+
+    
+          <section class="design-boks">
+           <!-- Design 1 -->
+            <div id="design1" class="kort design1" onclick="velgDesign('design1')">
+              <div class="img-russ"><img src="rodruss.tittel.png" alt="rødruss"></div>
+              <div class="img-russBilde"><img src="elmo.jpg" alt="elmo"></div>
+              <h2 class="kort-navn" data-font-størrelse="25px" >Navn</h2>
+              <h2 class="kort-skole" data-font-størrelse="25px"  >Skole</h2>
+              <p class="kort-postnummer" data-font-størrelse="15px">Adr: 1234</p>
+              <p class="kort-telefon" data-font-størrelse="15px">Tlf: 12345678</p>
+              <p class="kort-tekst" data-font-størrelse="15px">Lorem ipsum dolor sit, amet consectetur adipisicing elit.  </p>
+              
+            </div>
+
+            <!-- Design 2 -->
+            <div id="design2" class="kort design2"  onclick="velgDesign('design2')">
+              <div class="img-russ"><img src="blaaruss.tittel.png" alt="blåruss"></div>
+              <div class="img-russBilde"><img src="elmo.jpg" alt="elmo"></div>
+              <h2 class="kort-navn" data-font-størrelse="25px" >Navn</h2>
+              <h2 class="kort-skole" data-font-størrelse="25px" >Skole</h2>
+              <p class="kort-postnummer" data-font-størrelse="15px">Adr: 1234</p>
+              <p class="kort-telefon" data-font-størrelse="15px">Tlf: 123 45 678</p>
+              <p class="kort-tekst" data-font-størrelse="15px">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              
+            </div>
+
+            
+     
+    </form>
+
+    
+    
+    <section class="kort-boks">
+      <div id="valgtKort" class="kort" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); width: 650px; height: 350px;"></div>
+
+      
+      
+    </section>
+
+
+    <script>
+
+
+function velgDesign(design) {
+  valgtDesign = design;
+
+  const designalternativer = ['design1', 'design2'];
+  designalternativer.forEach(d => {
+    document.getElementById(d).classList.remove('valgt');
+  });
+
+  document.getElementById(valgtDesign).classList.add('valgt');
+
+  const valgtKort = document.getElementById("valgtKort");
+  valgtKort.className = `kort ${valgtDesign}`;
+
+  valgtKort.innerHTML = document.getElementById(valgtDesign).innerHTML;
+
+  const tekstElementer = valgtKort.querySelectorAll(".kort-navn, .kort-skole, .kort-postnummer, .kort-telefon, kort-tekst");
+  tekstElementer.forEach(element => {
+    const fontStørrelse = element.dataset.fontStørrelse;
+    element.style.fontSize = fontStørrelse;
+
+  });
+
+  valgtKort.querySelector('.kort-navn').textContent = document.getElementById("navn").value;
+  valgtKort.querySelector('.kort-skole').textContent = document.getElementById("skole").value;
+  valgtKort.querySelector('.kort-postnummer').textContent = `Adr: ${document.getElementById("postnummer").value}`;
+  valgtKort.querySelector('.kort-telefon').textContent = `Tlf: ${document.getElementById("telefon").value}`;
+  valgtKort.querySelector('.kort-tekst').textContent = document.getElementById("tekst").value;
+
+  
+  const imgRuss = valgtKort.querySelector('.img-russ img');
+  imgRuss.style.width = "300px"; 
+  
+  const imgRussBilde = valgtKort.querySelector('.img-russBilde img');
+  imgRussBilde.style.height = "200px"; 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
